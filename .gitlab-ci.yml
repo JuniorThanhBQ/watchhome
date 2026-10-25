@@ -1,0 +1,22 @@
+
+stages:
+  - test
+  - build
+  - deploy
+
+include:
+  - template: Jobs/SAST.gitlab-ci.yml
+  - template: Jobs/Secret-Detection.gitlab-ci.yml
+  - template: Jobs/Dependency-Scanning.v2.gitlab-ci.yml
+
+test:
+  stage: test
+  image: alpine:3.20
+  script:
+    - echo "Replace with project tests"
+
+build:
+  stage: build
+  image: alpine:3.20
+  script:
+    - echo "Replace with build commands"
